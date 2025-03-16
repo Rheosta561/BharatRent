@@ -17,7 +17,7 @@ function Dashboard() {
     if (token) {
       // Fetch the user's details using the token
       axios
-        .get('http://localhost:5000/user-details', {
+        .get('http://localhost:3000/user-details', {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -56,7 +56,7 @@ function Dashboard() {
 
       <div className='mx-2 text-center text-gray-800'>BharatRent Brings you the most useful features to ease your rental experience</div>
       <div className='mx-2 border mt-2 h-fit rounded-lg grid grid-cols-1 gap-2 md:grid-cols-3 p-2 bg-gray-50 '>
-        <FeatureCard title="Seamless Rental Agreement Creation " img="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWdyZWVtZW50fGVufDB8fDB8fHww" desc="Quickly generate legally valid rental agreements using pre-verified templates. Customize agreements as per landlord and tenant requirements while ensuring compliance with local rental laws."/>
+        <FeatureCard title="Seamless Rental Agreement Creation " img="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWdyZWVtZW50fGVufDB8fDB8fHww" desc="Quickly generate legally valid rental agreements using pre-verified templates. Customize agreements as per landlord and tenant requirements while ensuring compliance with local rental laws." link = "/RentAgreement"/>
         <FeatureCard title = "Secure & Verified Payments" desc="Encrypted transactions for rent payments, security deposits, and other charges. Supports multiple payment gateways like Stripe, Razorpay, and UPI for hassle-free transactions." img="https://media.gettyimages.com/id/1961788019/photo/secure-mobile-payment.jpg?s=612x612&w=0&k=20&c=7tM01gbOlATQouqzM7kwpsjeotsh_7vHnyaBlt3QfhE="/>
         <FeatureCard title ="Advanced Identity & Financial Verification" desc="Ensures both tenant and landlord authenticity through Aadhaar, PAN, and government ID verification. Credit/Debit history analysis prevents fraud and defaults, ensuring trust and reliability." img="https://img.freepik.com/free-vector/hand-with-mobile-face-scan-man_24908-56380.jpg?t=st=1742112306~exp=1742115906~hmac=7684602c92c08b4f9fc41848347e886e386f02f8f9b94de3b83e008f407c2aaf&w=1380"/>
         <FeatureCard title = "AI-Powered Dispute Resolution" desc=" Integrated chatbot offers real-time guidance on disputes and legal proceedings. Automates mediation processes and provides legal support options for faster resolutions."

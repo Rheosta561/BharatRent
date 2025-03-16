@@ -5,6 +5,7 @@ import Home from "./Screens/Home";
 import Dashboard from "./Screens/Dashboard";
 import RentAgreement from "./RentAgreement";
 import RentAgreementForm from "./RentAgreementForm";
+import Chatbot from "./Screens/Chatbot";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Route path="/dashboard" element={<Dashboard/>} />
       <Route path="/RentAgreement" element={<RentAgreement />} />
       <Route path="/RentAgreementForm" element={<RentAgreementForm />} />
+      <Route path ='/chatbot'  element ={<Chatbot/>}/>
     </Routes>
   );
 }

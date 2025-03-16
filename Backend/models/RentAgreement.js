@@ -1,33 +1,34 @@
-// models/RentAgreement.js
+const mongoose = require("mongoose");
 
-const mongoose = require('mongoose');
-
-const rentAgreementSchema = new mongoose.Schema({
-  tenantName: {
-    type: String,
-    required: true
-  },
-  landlordName: {
-    type: String,
-    required: true
-  },
-  propertyAddress: {
-    type: String,
-    required: true
-  },
-  startDate: {
-    type: Date,
-    required: true
-  },
-  endDate: {
-    type: Date,
-    required: true
-  },
-  paymentStatus: {
-    type: Number,
-    enum: [0, 1], // 0 = unpaid, 1 = paid
-    default: 0 // Initial state is unpaid
-  }
+const landlordSchema = new mongoose.Schema({
+  name: String,
+  idProofType: String,
+  idNumber: String,
+  address: String,
 });
 
-module.exports = mongoose.model('RentAgreement', rentAgreementSchema);
+const tenantSchema = new mongoose.Schema({
+  name: String,
+  idProofType: String,
+  idNumber: String,
+  address: String,
+});
+
+const rentAgreementSchema = new mongoose.Schema({
+  dateOfAgreement: String,
+  placeOfAgreement: String,
+  stateOfAgreement: String,
+  propertyAddress: String,
+  tenancyStartDate: String,
+  tenancyPeriod: Number,
+  monthlyRent: Number,
+  rentPaymentDay: Number,
+  securityAmount: Number,
+  landlordType: String,
+  landlords: [landlordSchema],
+  tenantType: String,
+  tenants: [tenantSchema],
+  paymentStatus: String,
+});
+
+module.exports = mongoose.model("RentAgreement", rentAgreementSchema);

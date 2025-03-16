@@ -1,8 +1,14 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom';
 
 function FeatureCard(props) {
+  const navigate = useNavigate();
+  const handleClick=()=>{
+    navigate(props.link)
+
+  }
   return (
-    <div className='min-h-60 h-fit p-4 rounded-lg bg-white relative overflow-hidden'>
+    <div className='min-h-60 h-72 p-4 rounded-lg bg-white relative overflow-hidden'>
 
         <img 
           src={props.img}
@@ -17,7 +23,7 @@ function FeatureCard(props) {
 
             </div>
           
-          <button className='w-fit p-2 mb-8  bg-emerald-900 rounded-lg '>Get Started</button>
+          <button className='w-fit p-2 mb-8  bg-emerald-900 rounded-lg transition-all' onClick={handleClick}>Get Started</button>
         </div>
     </div>
   )

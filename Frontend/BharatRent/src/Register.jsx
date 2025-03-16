@@ -12,7 +12,7 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/register", {
+      const res = await axios.post("http://localhost:3000/register", {
         username,
         email,
         password,
@@ -28,7 +28,7 @@ const Register = () => {
   return (
     <div className="auth-container">
       <h2>Register</h2>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="text-zinc-900">
         <input
           type="text"
           placeholder="Username"

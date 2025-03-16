@@ -24,7 +24,7 @@ const RentAgreementForm = () => {
     tenants: [{ name: "", idProofType: "", idNumber: "", address: "" }],
     paymentStatus: "",
   });
-  const generateAgreementPDF = () => {
+  const generateAgreementPDF = async () =>  {
     const doc = new jsPDF();
     
     // Helper function to get values with a default
@@ -154,6 +154,14 @@ const RentAgreementForm = () => {
   
     // Save PDF
     doc.save("Rental_Agreement.pdf");
+
+    try {
+        const response = await axios.post("http://localhost:5000/create", formData);
+        console.log("Agreement created successfully", response.data);
+      } catch (error) {
+        console.error("Error creating agreement", error);
+      }
+
   };
   
   
@@ -181,6 +189,7 @@ const RentAgreementForm = () => {
       setFormData({ ...formData, [name]: value });
     }
   };
+  
 
   const handlePersonChange = (index, field, value, type) => {
     const updatedList = [...formData[type]];
@@ -188,10 +197,24 @@ const RentAgreementForm = () => {
     setFormData({ ...formData, [type]: updatedList });
   };
 
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    try {
+      // Make API request to create the agreement
+      const response = await axios.post("http://localhost:5000/create", formData);
+      console.log("Agreement created successfully", response.data);
+      // You can also reset the form or redirect the user on successful creation
+    } catch (error) {
+      console.error("Error creating agreement", error);
+    }
+  };
+
   const nextStep = () => setStep((prev) => prev + 1);
   const prevStep = () => setStep((prev) => prev - 1);
 
   return (
+    <form onSubmit={handleSubmit}>
     <div className="form-container">
       {step === 1 && (
         <div className="form-step">
@@ -360,6 +383,7 @@ const RentAgreementForm = () => {
 )}
 
     </div>
+    </form>
   );
 };
 
