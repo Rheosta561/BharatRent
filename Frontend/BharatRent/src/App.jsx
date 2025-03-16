@@ -8,6 +8,8 @@ import RentAgreementForm from "./RentAgreementForm";
 import Chatbot from "./Screens/Chatbot";
 import ComingSoon from "./Screens/ComingSoon";
 import Contract from "./Screens/Contract";
+import About from "./Screens/About"
+import ContactUs from "./Screens/Contact";
 
 function App() {
   return (
@@ -21,6 +23,8 @@ function App() {
       <Route path ='/chatbot'  element ={<Chatbot/>}/>
       <Route path ='/coming-soon'  element ={<ComingSoon/>}/>
       <Route path = '/contract-summarisation' element ={<Contract/>}/>
+      <Route path ='/about'  element ={<About/>}/>
+      <Route path ='/contact'  element ={<ContactUs/>}/>
     </Routes>
   );
 }

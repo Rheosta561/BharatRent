@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import logo from '../logo.png'
+import { Link } from "react-router-dom";
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -78,12 +79,12 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700  "
-              >
-                About
-              </a>
+            <Link
+  to="/about"
+  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+>
+  About
+</Link>
             </li>
             <li>
               <a
@@ -102,12 +103,12 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a
-                href="#"
-                className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 "
-              >
-                Contact
-              </a>
+            <Link
+  to="/contact"
+  className="block py-2 px-3 md:p-0 text-gray-900 rounded-sm hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700"
+>
+  Contact
+</Link>
             </li>
           </ul>
         </div>
