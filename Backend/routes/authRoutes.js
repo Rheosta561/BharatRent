@@ -3,6 +3,8 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const router = express.Router();
+const upload = require('../middleware/upload');
+const Document = require('../models/Documents');
 
 // Register
 router.post("/register", async (req, res) => {
@@ -73,6 +75,33 @@ const verifyToken = (req, res, next) => {
       // Add any other fields you want to expose from the user object
     });
   });
+  // Upload document
+  router.post('/upload', upload.single('file'), async (req, res) => {
+    try {
+        const { title, user } = req.body;
+        const fileUrl = req.file.path;  
+
+        const newDocument = new Document({
+            title,
+            fileUrl,
+            user,
+        });
+
+        await newDocument.save();
+        res.status(201).json({ message: 'File uploaded successfully', document: newDocument });
+    } catch (error) {
+        res.status(500).json({ error: 'File upload failed' });
+    }
+});
+router.get(`/documents/:userId`, async(req,res)=>{
+    try{
+        const documents = await Document.find({user: req.params.userId});
+        res.status(200).json(documents);
+    }catch(error){
+        res.status(500).json({error: 'Server error'});
+    }
+})
+
   
 
 module.exports = router;
