@@ -18,7 +18,7 @@ function Dashboard() {
     
     if (token) {
       axios
-        .get('http://localhost:3000/user-details', {
+        .get('https://bharatrent.onrender.com/user-details', {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {

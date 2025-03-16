@@ -14,7 +14,7 @@ function Contract() {
 
     if (token) {
       axios
-        .get("http://localhost:3000/user-details", {
+        .get("https://bharatrent.onrender.com/user-details", {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {
@@ -30,7 +30,7 @@ function Contract() {
   useEffect(() => {
     if (userId) {
       axios
-        .get(`http://localhost:3000/documents/${userId}`)
+        .get(`https://bharatrent.onrender.com/documents/${userId}`)
         .then((response) => {
           setUploadedFiles(response.data);
         })
@@ -51,7 +51,7 @@ function Contract() {
       formData.append("user", userId);
 
       try {
-        const response = await axios.post("http://localhost:3000/upload", formData, {
+        const response = await axios.post("https://bharatrent.onrender.com/upload", formData, {
           headers: { "Content-Type": "multipart/form-data" },
         });
 
