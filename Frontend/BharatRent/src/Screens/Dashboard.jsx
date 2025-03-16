@@ -4,6 +4,7 @@ import FeatureCard from './FeatureCard'
 import ProblemCard from './ProblemCard'
 import Footer from './Footer'
 import vikrant from '../vikrant.png'
+
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 function Dashboard() {
@@ -57,14 +58,14 @@ function Dashboard() {
       <div className='mx-2 text-center text-gray-800'>BharatRent Brings you the most useful features to ease your rental experience</div>
       <div className='mx-2 border mt-2 h-fit rounded-lg grid grid-cols-1 gap-2 md:grid-cols-3 p-2 bg-gray-50 '>
         <FeatureCard title="Seamless Rental Agreement Creation " img="https://images.unsplash.com/photo-1549923746-c502d488b3ea?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8YWdyZWVtZW50fGVufDB8fDB8fHww" desc="Quickly generate legally valid rental agreements using pre-verified templates. Customize agreements as per landlord and tenant requirements while ensuring compliance with local rental laws." link = "/RentAgreement"/>
-        <FeatureCard title = "Secure & Verified Payments" desc="Encrypted transactions for rent payments, security deposits, and other charges. Supports multiple payment gateways like Stripe, Razorpay, and UPI for hassle-free transactions." img="https://media.gettyimages.com/id/1961788019/photo/secure-mobile-payment.jpg?s=612x612&w=0&k=20&c=7tM01gbOlATQouqzM7kwpsjeotsh_7vHnyaBlt3QfhE="/>
-        <FeatureCard title ="Advanced Identity & Financial Verification" desc="Ensures both tenant and landlord authenticity through Aadhaar, PAN, and government ID verification. Credit/Debit history analysis prevents fraud and defaults, ensuring trust and reliability." img="https://img.freepik.com/free-vector/hand-with-mobile-face-scan-man_24908-56380.jpg?t=st=1742112306~exp=1742115906~hmac=7684602c92c08b4f9fc41848347e886e386f02f8f9b94de3b83e008f407c2aaf&w=1380"/>
+        <FeatureCard title = "Secure & Verified Payments" desc="Encrypted transactions for rent payments, security deposits, and other charges. Supports multiple payment gateways like Stripe, Razorpay, and UPI for hassle-free transactions." img="https://media.gettyimages.com/id/1961788019/photo/secure-mobile-payment.jpg?s=612x612&w=0&k=20&c=7tM01gbOlATQouqzM7kwpsjeotsh_7vHnyaBlt3QfhE=" link ="/coming-soon"/>
+        <FeatureCard title ="Advanced Identity & Financial Verification" desc="Ensures both tenant and landlord authenticity through Aadhaar, PAN, and government ID verification. Credit/Debit history analysis prevents fraud and defaults, ensuring trust and reliability." img="https://img.freepik.com/free-vector/hand-with-mobile-face-scan-man_24908-56380.jpg?t=st=1742112306~exp=1742115906~hmac=7684602c92c08b4f9fc41848347e886e386f02f8f9b94de3b83e008f407c2aaf&w=1380" link ="/coming-soon"/>
         <FeatureCard title = "AI-Powered Dispute Resolution" desc=" Integrated chatbot offers real-time guidance on disputes and legal proceedings. Automates mediation processes and provides legal support options for faster resolutions."
         img="https://img.freepik.com/free-photo/discussing-busines-report_1098-16536.jpg?uid=R156956613&ga=GA1.1.1904776371.1723148990&semt=ais_hybrid"/>
         <FeatureCard title = "Smart Contract Summarization" desc="AI-driven contract analysis extracts and highlights key terms, making agreements easier to understand. Ensures users are aware of rent escalation clauses, maintenance responsibilities, and termination conditions."
         img="https://plus.unsplash.com/premium_photo-1661384314885-2976d3edd919?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8c21hcnQlMjBjb250cmFjdHxlbnwwfHwwfHx8MA%3D%3D"/>
         <FeatureCard title="Subscription-Based Services for Landlords & Property Managers" desc="Premium plans for automated rent collection, maintenance tracking, and legal support. Custom dashboard for managing multiple properties with automated reminders and reports." img="https://media.gettyimages.com/id/2188909288/photo/mutual-agreement-and-handshake.jpg?s=612x612&w=0&k=20&c=uce_6nOrTpTm5mQApk4ZwaZ_lR1YVnnWNYdTBO4rnZk="/>
-        <FeatureCard title = "Collaborations with Real Estate Agencies & Legal Firms" desc = "Pre-vetted rental agreements drafted with legal experts for standardization. Enables seamless adoption in the real estate ecosystem, driving platform credibility and revenue." img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZSUyMGFnZW50fGVufDB8fDB8fHww"/>
+        <FeatureCard title = "Collaborations with Real Estate Agencies & Legal Firms" desc = "Pre-vetted rental agreements drafted with legal experts for standardization. Enables seamless adoption in the real estate ecosystem, driving platform credibility and revenue." img="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=900&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVhbCUyMGVzdGF0ZSUyMGFnZW50fGVufDB8fDB8fHww" link ="/coming-soon"/>
       </div>
       <br />
       <br />
