@@ -22,7 +22,7 @@ const Login = () => {
 
   return (
     <div className="auth-container">
-      <h2>Login</h2>
+      <h2 className="">Login</h2>
       <form onSubmit={handleSubmit}>
         <input
           type="email"
@@ -30,6 +30,7 @@ const Login = () => {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
+          className="text-zinc-900"
         />
         <input
           type="password"
@@ -37,6 +38,7 @@ const Login = () => {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
+          className="text-zinc-900"
         />
         <button type="submit">Login</button>
       </form>
