@@ -3,6 +3,8 @@ import Login from "./Login";
 import Register from "./Register";
 import Home from "./Screens/Home";
 import Dashboard from "./Screens/Dashboard";
+import RentAgreement from "./RentAgreement";
+import RentAgreementForm from "./RentAgreementForm";
 
 function App() {
   return (
@@ -11,6 +13,8 @@ function App() {
       <Route path="/login" element={<Login />} />
       <Route path="/register" element={<Register />} />
       <Route path="/dashboard" element={<Dashboard/>} />
+      <Route path="/RentAgreement" element={<RentAgreement />} />
+      <Route path="/RentAgreementForm" element={<RentAgreementForm />} />
     </Routes>
   );
 }
