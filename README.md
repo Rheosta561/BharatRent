@@ -8,6 +8,35 @@ This platform simplifies the process of creating legally valid rent agreements, 
 
 ### 📋 &nbsp; Key Features
 
+🏡 &nbsp; **Seamless Rental Agreement Creation** :
+Quickly generate legally valid rental agreements using pre-verified templates.
+Customize agreements as per landlord and tenant requirements while ensuring compliance with local rental laws.
+
+🔐 &nbsp; **Secure & Verified Payments**: 
+Encrypted transactions for rent payments, security deposits, and other charges.
+Supports multiple payment gateways like Stripe, Razorpay, and UPI for hassle-free transactions.
+
+🆔 &nbsp; **Advanced Identity & Financial Verification**: 
+Ensures both tenant and landlord authenticity through Aadhaar, PAN, and government ID verification.
+Credit/Debit history analysis prevents fraud and defaults, ensuring trust and reliability.
+
+🤖 &nbsp; **AI-Powered Dispute Resolution**: 
+Integrated chatbot offers real-time guidance on disputes and legal proceedings.
+Automates mediation processes and provides legal support options for faster resolutions.
+
+📜 &nbsp; **Smart Contract Summarization**: 
+AI-driven contract analysis extracts and highlights key terms, making agreements easier to understand.
+Ensures users are aware of rent escalation clauses, maintenance responsibilities, and termination conditions.
+
+📦 &nbsp; **Subscription-Based Services for Landlords & Property Managers**: 
+Premium plans for automated rent collection, maintenance tracking, and legal support.
+Custom dashboard for managing multiple properties with automated reminders and reports.
+
+🤝 &nbsp; **Collaborations with Real Estate Agencies & Legal Firms**: 
+Pre-vetted rental agreements drafted with legal experts for standardization.
+Enables seamless adoption in the real estate ecosystem, driving platform credibility and revenue.
+
+
 - **Easy Agreement Creation** – Generate rental agreements digitally with legal compliance. <br>
 - **Secure Payments** – Safe and verified payment processing between parties. <br>
 - **Identity Verification** – Ensures both tenant and landlord are authenticated. <br>
