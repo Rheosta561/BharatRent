@@ -12,11 +12,11 @@ This platform simplifies the process of creating legally valid rent agreements, 
 Quickly generate legally valid rental agreements using pre-verified templates.
 Customize agreements as per landlord and tenant requirements while ensuring compliance with local rental laws.
 
-🔐 &nbsp; **Secure & Verified Payments**: 
+🔐 &nbsp; **Secure & Verified Payments (future plan of action)**: 
 Encrypted transactions for rent payments, security deposits, and other charges.
 Supports multiple payment gateways like Stripe, Razorpay, and UPI for hassle-free transactions.
 
-🆔 &nbsp; **Advanced Identity & Financial Verification**: 
+🆔 &nbsp; **Advanced Identity & Financial Verification (future plan of action)**: 
 Ensures both tenant and landlord authenticity through Aadhaar, PAN, and government ID verification.
 Credit/Debit history analysis prevents fraud and defaults, ensuring trust and reliability.
 
