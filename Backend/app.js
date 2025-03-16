@@ -12,6 +12,11 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
+app.use(cors({
+  origin: 'https://bharatrent.vercel.app',  // Allow only your frontend domain
+  methods: 'GET,POST,PUT,DELETE',
+  credentials: true
+}));
 
 app.use( authRoutes);
 app.use( rentRoutes);

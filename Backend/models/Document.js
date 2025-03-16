@@ -6,7 +6,7 @@ const DocumentSchema = mongoose.Schema({
         required: true,
     },
    
-    file: {
+    fileUrl: {
         type: String,
         required: true,
     },
@@ -18,4 +18,5 @@ const DocumentSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'User',
     },
-})
+});
+module.exports = mongoose.model('Document', DocumentSchema);

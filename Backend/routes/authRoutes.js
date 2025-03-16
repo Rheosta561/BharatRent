@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const User = require("../models/User");
 const router = express.Router();
 const upload = require('../middleware/upload');
-const Document = require('../models/Documents');
+const Document = require('../models/Document');
 
 // Register
 router.post("/register", async (req, res) => {
@@ -79,20 +79,30 @@ const verifyToken = (req, res, next) => {
   router.post('/upload', upload.single('file'), async (req, res) => {
     try {
         const { title, user } = req.body;
+
+
+        if (!req.file) {
+            return res.status(400).json({ message: "File upload failed" });
+        }
+
+
         const fileUrl = req.file.path;  
+
 
         const newDocument = new Document({
             title,
-            fileUrl,
+            fileUrl,  
             user,
         });
 
         await newDocument.save();
         res.status(201).json({ message: 'File uploaded successfully', document: newDocument });
     } catch (error) {
+        console.error(error);
         res.status(500).json({ error: 'File upload failed' });
     }
 });
+
 router.get(`/documents/:userId`, async(req,res)=>{
     try{
         const documents = await Document.find({user: req.params.userId});
