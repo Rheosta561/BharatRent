@@ -4,7 +4,30 @@ import FeatureCard from './FeatureCard'
 import ProblemCard from './ProblemCard'
 import Footer from './Footer'
 import vikrant from '../vikrant.png'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 function Dashboard() {
+
+  const [username, setUsername] = useState('');
+
+  useEffect(() => {
+    // Assuming you have stored the JWT token in localStorage after login/register
+    const token = localStorage.getItem('token');
+    
+    if (token) {
+      // Fetch the user's details using the token
+      axios
+        .get('http://localhost:5000/user-details', {
+          headers: { Authorization: `Bearer ${token}` },
+        })
+        .then((response) => {
+          setUsername(response.data.username);
+        })
+        .catch((error) => {
+          console.error('Error fetching user details:', error);
+        });
+    }
+  }, []);
   return (
     <div>
       <Navbar />
@@ -28,7 +51,7 @@ function Dashboard() {
       <div className="w-screen text-6xl mt-3 text-center font-semibold 
       bg-gradient-to-r from-zinc-800 via-zinc-900 to-zinc-500
       bg-clip-text text-transparent">
-  Hi Anubhav
+  Hi {username || 'User'}
 </div>
 
       <div className='mx-2 text-center text-gray-800'>BharatRent Brings you the most useful features to ease your rental experience</div>

@@ -22,7 +22,7 @@ const RentAgreementForm = () => {
     tenantType: "",
     numberOfTenants: 1,
     tenants: [{ name: "", idProofType: "", idNumber: "", address: "" }],
-    
+    paymentStatus: "",
   });
   const generateAgreementPDF = () => {
     const doc = new jsPDF();
@@ -238,6 +238,13 @@ const RentAgreementForm = () => {
           <label>Security Amount:</label>
           <input type="number" name="securityAmount" value={formData.securityAmount} onChange={handleChange} />
           
+          <label>Payment Status:</label>
+    <select name="paymentStatus" value={formData.paymentStatus} onChange={handleChange}>
+      <option value="">Select Payment Status</option>
+      <option value="Paid">Paid</option>
+      <option value="Unpaid">Unpaid</option>
+      <option value="Pending">Pending</option>
+    </select>
           <button onClick={prevStep}>Previous</button>
           <button onClick={nextStep}>Next</button>
         </div>
