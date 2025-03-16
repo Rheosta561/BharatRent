@@ -37,15 +37,6 @@ Pre-vetted rental agreements drafted with legal experts for standardization.
 Enables seamless adoption in the real estate ecosystem, driving platform credibility and revenue.
 
 
-- **Easy Agreement Creation** – Generate rental agreements digitally with legal compliance. <br>
-- **Secure Payments** – Safe and verified payment processing between parties. <br>
-- **Identity Verification** – Ensures both tenant and landlord are authenticated. <br>
-- **Credit/Debit History Checks** – Provides financial insights to prevent fraud. <br>
-- **Dispute Resolution System** – AI-driven chatbot guides users in legal matters. <br>
-- **Smart Contract Summarization** – Highlights important clauses for better understanding. <br>
-- **Subscription Services** – Premium legal support and property management plans for landlords. <br>
-- **Real Estate & Legal Firm Collaborations** – Standardized agreements and revenue generation through partnerships.<br>
-
 
 ### 🔧 &nbsp; Tech Stack
 
@@ -78,3 +69,14 @@ Enables seamless adoption in the real estate ecosystem, driving platform credibi
  ![Python](https://img.shields.io/badge/-Python-333333?style=flat&logo=python)
  ![Docker](https://img.shields.io/badge/-Docker-333333?style=flat&logo=docker)
  ![LangChain](https://img.shields.io/badge/LangChain-333333?style=flat&logo=LangChain)
+
+
+<hr> 
+
+ ### 🎯 &nbsp; Future Roadmap
+
+- Advanced Identity verification and Financial Verification. <br>
+- Secure & Verified Payments by integrating payment gateway. <br>
+- Blockchain-based rental agreements. <br>
+- AI-powered legal insights.<br>
+- Integration with more payment options. <br>
